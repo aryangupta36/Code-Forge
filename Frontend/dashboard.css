@@ -1,0 +1,159 @@
+:root {
+    --primary: #2563eb;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-sub: #64748b;
+    --border: #e2e8f0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #334155;
+    color: white;
+}
+
+.signup-btn {
+    background: var(--primary);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Practice Hero */
+.practice-hero {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.hero-content { flex: 1; }
+.hero-content h1 { font-size: 2.5rem; margin-bottom: 20px; }
+.highlight { color: var(--primary); }
+.hero-content p { color: var(--text-sub); line-height: 1.6; margin-bottom: 30px; }
+
+.hero-btns { display: flex; gap: 15px; margin-bottom: 15px; }
+.primary-btn { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+.secondary-btn { background: white; border: 1px solid var(--border); padding: 12px 25px; border-radius: 8px; cursor: pointer; }
+
+/* Code Window */
+.code-window {
+    flex: 1;
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+}
+
+.window-header { display: flex; gap: 8px; margin-bottom: 20px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.red { background: #ff5f56; } .yellow { background: #ffbd2e; } .green { background: #27c93f; }
+
+.keyword { color: #c678dd; }
+.func { color: #61afef; }
+.comment { color: #5c6370; }
+.number { color: #d19a66; }
+
+/* Challenges Section */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.filters { display: flex; gap: 10px; }
+.filter-select { padding: 8px 12px; border-radius: 6px; border: 1px solid var(--border); background: white; }
+
+.challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.challenge-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s;
+}
+
+.challenge-card:hover { transform: translateY(-5px); }
+
+.card-top { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+.easy { background: #dcfce7; color: #166534; }
+.medium { background: #fef9c3; color: #854d0e; }
+.hard { background: #fee2e2; color: #991b1b; }
+
+.card-meta { display: flex; gap: 15px; font-size: 13px; color: var(--text-sub); margin: 20px 0; }
+.start-btn { width: 100%; background: var(--primary); color: white; border: none; padding: 10px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+/* 1. DEFINE THE COLORS */
+:root {
+    --bg-color: #0b1225;          /* Dark Navy */
+    --text-color: #ffffff;
+    --card-bg: rgba(255,255,255,0.06); 
+    --nav-bg: #0c1630;
+    --border: rgba(255,255,255,0.1);
+}
+
+/* 2. OVERRIDE FOR LIGHT MODE */
+body.light-mode {
+    --bg-color: #f8fafc;          /* Off-white */
+    --text-color: #1e293b;        /* Dark Slate */
+    --card-bg: #ffffff;           /* Pure White */
+    --nav-bg: #ffffff;
+    --border: #e2e8f0;
+}
+
+/* 3. APPLY TO THE PAGE */
+body {
+    background: var(--bg-color) !important; /* Force use of variable */
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.navbar {
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Apply to your cards so they turn white/dark */
+.card, .challenge-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--text-color);
+}
+
+.sub, .hero-content p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+.login {
+    color: var(--sub-text);
+    text-decoration: none;
+    font-weight: 500;
+}

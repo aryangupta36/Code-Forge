@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CodeForge - Problem Generator</title>
+<link rel="stylesheet" href="trial.css">
+</head>
+
+<body>
+
+<div class="background-radial">
+
+<div class="glass-card">
+
+<h1>Generate Your Practice Problem</h1>
+<p class="subtitle">Select your preferences to get started</p>
+
+<div class="form-group">
+<select id="language">
+<option>Select Language</option>
+<option>JavaScript</option>
+<option>Python</option>
+<option>Java</option>
+<option>C++</option>
+</select>
+
+<select id="topic">
+<option>Select Topic</option>
+<option>Arrays</option>
+<option>Strings</option>
+<option>Trees</option>
+<option>Graphs</option>
+</select>
+
+<select id="difficulty">
+<option>Select Difficulty</option>
+<option>Easy</option>
+<option>Medium</option>
+<option>Hard</option>
+</select>
+</div>
+
+<button class="btn btn-blue" onclick="generateProblem()">
+✨ Generate Problem
+</button>
+
+<button class="btn btn-orange" onclick="showHint()">
+💡 Hint
+</button>
+
+<button class="btn btn-green" onclick="showSolution()">
+✓ Solution
+</button>
+
+<div id="output"></div>
+
+</div>
+
+</div>
+
+<script src="trial.js"></script>
+
+</body>
+</html>

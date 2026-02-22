@@ -1,0 +1,348 @@
+/* =========================================
+   1. VARIABLES & THEMES 
+   ========================================= */
+:root {
+    /* Dark Mode (Default) */
+    --bg-color: radial-gradient(circle at center, #1e293b 0%, #0a1128 100%);
+    --nav-bg: #0c1630;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --text-color: #ffffff;
+    --sub-text: #a9b2cc;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --google-btn-bg: #e8e8e8;
+    --google-btn-text: #000000;
+}
+
+body.light-mode {
+    /* Light Mode Overrides */
+    --bg-color: radial-gradient(circle at center, #f8fafc 0%, #cbd5e1 100%);
+    --nav-bg: #ffffff;
+    --card-bg: #ffffff;
+    --text-color: #0f172a;
+    --sub-text: #475569;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --google-btn-bg: #1e293b;
+    --google-btn-text: #ffffff;
+}
+
+/* =========================================
+   2. GLOBAL RESET 
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: background 0.4s ease, color 0.4s ease;
+    min-height: 100vh;
+}
+
+/* =========================================
+   3. NAVBAR 
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 70px;
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.4s ease;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.login {
+    color: var(--sub-text);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* =========================================
+   4. THEME TOGGLE BUTTON 
+   ========================================= */
+.theme-btn {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+.theme-icon {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+/* =========================================
+   5. MAIN LAYOUT & HERO 
+   ========================================= */
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 70px;
+    gap: 60px;
+}
+
+.hero {
+    max-width: 620px;
+}
+
+.hero h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.hero p {
+    font-size: 20px;
+    color: var(--sub-text);
+    margin-bottom: 40px;
+}
+
+/* =========================================
+   6. BUTTONS 
+   ========================================= */
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.google-btn {
+    background: var(--google-btn-bg);
+    color: var(--google-btn-text);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Spacing for the Google logo */
+    transition: 0.3s;
+}
+
+.google-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.signin-btn {
+    background: #2e63ff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* =========================================
+   7. CARDS & LIST ALIGNMENT
+   ========================================= */
+.card, .plan, .feature-card {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 18px;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, background 0.4s ease;
+    color: var(--text-color);
+}
+
+.card h2 { font-size: 28px; margin-bottom: 10px; }
+.card .sub { color: var(--sub-text); margin-bottom: 25px; font-size: 16px; }
+
+.feature-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+/* VERTICAL ALIGNMENT FIX FOR CHECKMARKS */
+.feature-list li {
+    display: flex;
+    align-items: center; /* PERFECT CENTER ALIGNMENT */
+    gap: 14px;
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+.check {
+    background: rgba(68, 129, 235, 0.2); /* Light blue circular glow */
+    color: #4481eb;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Prevents circle from squishing */
+    font-size: 12px;
+}
+
+/* =========================================
+   8. TRIAL BUTTON (Vibrant Gradient) 
+   ========================================= */
+.trial-btn {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin-top: 20px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    /* Specific blue to purple gradient */
+    background: linear-gradient(90deg, #3b82f6 0%, #a855f7 100%);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.trial-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   9. FEATURES SECTION 
+   ========================================= */
+.Why, .Path {
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 40px;
+    color: var(--text-color);
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 60px 70px;
+}
+
+.features .card {
+    flex: 1;
+    padding: 30px;
+}
+
+/* =========================================
+   10. PRICING SECTION 
+   ========================================= */
+.pricing {
+    display: flex;
+    gap: 30px;
+    padding: 60px 70px;
+    justify-content: center;
+}
+
+.plan {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.plan h3 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+.plan h3 span {
+    font-size: 16px;
+    color: var(--sub-text);
+}
+
+.plan:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.grey { background: #3a455b; color: white; }
+.purple { background: linear-gradient(90deg,#3a7bfd,#a64dff); color: white; }
+.orange { background: linear-gradient(90deg,#ff9900,#ff6a00); color: white; }
+
+.badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg,#3a7bfd,#a64dff);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: white;
+}
+
+/* =========================================
+   11. EXTRA FEATURES 
+   ========================================= */
+.extra-features {
+    display: flex;
+    gap: 20px;
+    padding: 50px 70px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    flex: 0 0 240px;
+    text-align: center;
+}
+
+.icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin: 0 auto 15px;
+    background: rgba(46, 99, 255, 0.1);
+}
+.Start {
+    text-align: center;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CodeForge</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code&display=swap" rel="stylesheet">
+</head>
+<body class="light-mode"> <header class="navbar">
+    <div class="logo">⚡ CodeForge</div>
+    <div class="nav-right">
+        <button id="theme-toggle" class="theme-btn">☀</button>
+    </div>
+</header>
+
+<main class="container">
+    <section class="practice-hero">
+        <div class="hero-content">
+            <h1>Code. Practice. <span class="highlight">Master.</span></h1>
+            <p>Level up your coding skills with AI-generated practice problems. Get personalized challenges that adapt to your skill level and help you master algorithms, data structures, and problem-solving.</p>
+            <div class="hero-btns">
+                <button class="primary-btn">⚡ Start Practicing</button>
+                <button class="secondary-btn">✨ Generate Problem</button>
+            </div>
+            <p class="sub-text">Free forever • No credit card required • Instant access</p>
+        </div>
+
+        <div class="code-window">
+            <div class="window-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+            <pre><code><span class="keyword">function</span> <span class="func">findTarget</span>(arr, target) {
+  <span class="comment">// AI generated problem</span>
+  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i < arr.length; i++) {
+    <span class="keyword">if</span> (arr[i] === target) {
+      <span class="keyword">return</span> i;
+    }
+  }
+  <span class="keyword">return</span> -<span class="number">1</span>;
+}</code></pre>
+        </div>
+    </section>
+
+    <section class="challenges-section">
+        <div class="section-header">
+            <div>
+                <h2>Browse Challenges</h2>
+                <p>Choose a problem to start practicing</p>
+            </div>
+            <div class="filters">
+                <select class="filter-select">
+                    <option>All Levels</option>
+                    <option>Easy</option>
+                    <option>Medium</option>
+                    <option>Hard</option>
+                </select>
+                <select class="filter-select">
+                    <option>JavaScript</option>
+                    <option>Python</option>
+                    <option>Java</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="challenge-grid">
+            <div class="challenge-card">
+                <div class="card-top">
+                    <h3>Two Sum</h3>
+                    <span class="badge easy">Easy</span>
+                </div>
+                <p>Given an array of integers, return indices of the two numbers that add up to a specific target.</p>
+                <div class="card-meta">
+                    <span>&lt;/&gt; Arrays</span>
+                    <span>⏱️ 15 min</span>
+                    <span>🏆 100 pts</span>
+                </div>
+                <button class="start-btn">Start Challenge</button>
+            </div>
+
+            <div class="challenge-card">
+                <div class="card-top">
+                    <h3>Binary Tree Inorder Traversal</h3>
+                    <span class="badge medium">Medium</span>
+                </div>
+                <p>Given the root of a binary tree, return the inorder traversal of its nodes' values.</p>
+                <div class="card-meta">
+                    <span>&lt;/&gt; Trees</span>
+                    <span>⏱️ 25 min</span>
+                    <span>🏆 200 pts</span>
+                </div>
+                <button class="start-btn">Start Challenge</button>
+            </div>
+
+            <div class="challenge-card">
+                <div class="card-top">
+                    <h3>Merge K Sorted Lists</h3>
+                    <span class="badge hard">Hard</span>
+                </div>
+                <p>Merge k sorted linked lists and return it as one sorted list.</p>
+                <div class="card-meta">
+                    <span>&lt;/&gt; Linked Lists</span>
+                    <span>⏱️ 45 min</span>
+                    <span>🏆 300 pts</span>
+                </div>
+                <button class="start-btn">Start Challenge</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

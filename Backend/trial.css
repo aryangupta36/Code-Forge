@@ -1,0 +1,65 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background: radial-gradient(circle at center, #1e293b 0%, #0a1128 100%);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+
+select {
+    background: #161f38;
+    color: #94a3b8;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-blue { background: #3b82f6; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4); }
+.btn-orange { background: #f97316; box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4); }
+.btn-green { background: #10b981; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4); }
+
+#output {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 0.85rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    max-height: 200px; /* Prevents overflow pushing buttons away */
+    overflow-y: auto;  /* Adds scrollbar for long questions */
+    white-space: pre-wrap;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#output::-webkit-scrollbar { width: 4px; }
+#output::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
